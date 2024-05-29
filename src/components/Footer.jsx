@@ -4,16 +4,6 @@ const Footer = () => {
   return (
     <footer className="bg-white dark:bg-[#1E1E1E]">
       <div className="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
-        <a href="#">
-          <img
-            className="w-auto h-7"
-            src="https://merakiui.com/images/full-logo.svg"
-            alt=""
-          />
-        </a>
-        <p className="text-sm text-gray-600 dark:text-gray-300">
-          © Copyright 2021. All Rights Reserved.
-        </p>
         <div className="flex -mx-2">
           <a
             href="#"
@@ -58,6 +48,13 @@ const Footer = () => {
             </svg>
           </a>
         </div>
+
+        <p className="text-sm text-gray-600 dark:text-gray-300">
+          Made with ❤ By Mukesh Choudhary
+        </p>
+        <button className=" dark:bg-white bg-[#1E1E1E] p-1 px-2 text-gray-300 dark:text-gray-900 font-semibold rounded-3xl">
+          Scroll Top
+        </button>
       </div>
     </footer>
   );

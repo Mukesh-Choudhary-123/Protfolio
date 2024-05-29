@@ -70,7 +70,7 @@ export default function Navbar() {
     <>
       <Disclosure
         as="nav"
-        className="bg-gray-300 dark:bg-[#726d6d] sticky top-0 z-10 "
+        className="bg-gray-300 dark:bg-[#1E1E1E]  sticky top-0 z-10 "
       >
         {({ open }) => (
           <>

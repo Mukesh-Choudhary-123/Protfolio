@@ -55,7 +55,7 @@ export default function HoreSec() {
                 I'm Mukesh Choudhary
               </h1>
               <span className="text-5xl font-bold text-gray-900 dark:text-white">
-                {currentWord} <Cursor cursorStyle="|" cursorColor="yellow" />
+                {currentWord} <Cursor cursorStyle="|" />
               </span>
 
               <p className="text-gray-900 dark:text-white pt-3">

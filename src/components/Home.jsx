@@ -6,20 +6,20 @@ import Projects from "./Projects";
 import AboutMe from "./AboutMe";
 import Footer from "./Footer";
 import { ScrollingProvider, Section } from "react-scroll-section";
+import Contact from "./Contact";
 
 const Home = () => {
   return (
-    <div>
-      <ScrollingProvider>
-        <Navbar></Navbar>
-        <Section id="home">
-          <HoreSec></HoreSec>
-        </Section>
-        <Skills></Skills>
-        <Projects></Projects>
-        <AboutMe></AboutMe>
-        <Footer></Footer>
-      </ScrollingProvider>
+    <div className="bg-white dark:bg-[#1E1E1E]">
+      <Navbar></Navbar>
+
+      <HoreSec></HoreSec>
+
+      <Skills></Skills>
+      <Projects></Projects>
+      <AboutMe></AboutMe>
+      <Contact></Contact>
+      <Footer></Footer>
     </div>
   );
 };

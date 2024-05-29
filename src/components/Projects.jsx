@@ -64,12 +64,14 @@ const Projects = () => {
               ))}
             </div>
           </div>
+
+          {/* Project 1 */}
           <div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-50">
             <span className="text-xs uppercase dark:text-gray-600">
-              Join, it's free
+              E-Commerce
             </span>
             <h3 className="text-3xl font-bold dark:text-gray-600">
-              We're not reinventing the wheel
+              Apna Market
             </h3>
             <p className="my-6 dark:text-gray-600">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
@@ -80,19 +82,35 @@ const Projects = () => {
             </button>
           </div>
         </div>
+        {/* Project 2 */}
         <div className="flex flex-col bg-gray-300 overflow-hidden rounded-md shadow-sm lg:flex-row-reverse">
-          <img
+          {/* <img
             src={ImageTwo}
             alt=""
             className="h-auto  max-h-80 dark:bg-gray-500  object-scale-down"
-          />
+          /> */}
+          <div className="slideshow">
+            <div
+              className="slideshowSlider"
+              style={{
+                transform: `translate3d(${-index * 100}%, 0, 0)`,
+              }}
+            >
+              {images.map((url, index) => (
+                <div
+                  className="slide inline-block h-auto max-h-80 dark:bg-gray-500  object-scale-down"
+                  key={index}
+                >
+                  <img src={url} alt="" />
+                </div>
+              ))}
+            </div>
+          </div>
           <div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-50">
             <span className="text-xs uppercase dark:text-gray-600">
-              Join, it's free
+              Chat App
             </span>
-            <h3 className="text-3xl font-bold dark:text-gray-600">
-              We're not reinventing the wheel
-            </h3>
+            <h3 className="text-3xl font-bold dark:text-gray-600">BaatKarlo</h3>
             <p className="my-6 dark:text-gray-600">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
               aliquam possimus quas, error esse quos.
@@ -102,18 +120,36 @@ const Projects = () => {
             </button>
           </div>
         </div>
+        {/* Project 3 */}
         <div className="flex flex-col bg-gray-300 overflow-hidden rounded-md shadow-sm lg:flex-row">
-          <img
+          {/* <img
             src={ImageThree}
             alt=""
             className="h-auto max-h-80 dark:bg-gray-500  object-scale-down"
-          />
+          /> */}
+          <div className="slideshow">
+            <div
+              className="slideshowSlider"
+              style={{
+                transform: `translate3d(${-index * 100}%, 0, 0)`,
+              }}
+            >
+              {images.map((url, index) => (
+                <div
+                  className="slide inline-block h-auto max-h-80 dark:bg-gray-500  object-scale-down"
+                  key={index}
+                >
+                  <img src={url} alt="" />
+                </div>
+              ))}
+            </div>
+          </div>
           <div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-50">
             <span className="text-xs uppercase dark:text-gray-600">
-              Join, it's free
+              Services App
             </span>
             <h3 className="text-3xl font-bold dark:text-gray-600">
-              We're not reinventing the wheel
+              Muksa Doctor
             </h3>
             <p className="my-6 dark:text-gray-600">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
