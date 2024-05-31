@@ -1,5 +1,6 @@
 import React from "react";
-
+import GITHUB_LOGO from "../assets/color_github.png";
+import LINKEDIN_LOGO from "../assets/linkedin.png";
 const Footer = () => {
   function handleToScrollTop() {
     const scrollStep = -window.scrollY / (1000 / 15); // 500ms duration for smooth scrolling
@@ -22,7 +23,7 @@ const Footer = () => {
             <img
               className="w-7 h-7"
               target="absolute"
-              src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000"
+              src={LINKEDIN_LOGO}
               alt="linkedin"
             />
           </a>
@@ -31,11 +32,7 @@ const Footer = () => {
             target="absolute"
             className="mx-2 text-gray-600"
           >
-            <img
-              className="w-8 h-8"
-              src="https://img.icons8.com/?size=100&id=sbhfmWq4KRr1&format=png&color=000000"
-              alt="github"
-            />
+            <img className="w-8 h-8" src={GITHUB_LOGO} alt="github" />
           </a>
         </div>
 

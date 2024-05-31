@@ -3,6 +3,8 @@ import ImageOne from "../assets/Img1.png";
 import ImageTwo from "../assets/BaatKarlo.png";
 import ImageThree from "../assets/Img3.png";
 import ApnaMarketLogo from "../assets/logo.png";
+import LIVE_LOGO from "../assets/live.png";
+import BAATKARLO_LOGO from "../assets/BaatKarlo_logo.png";
 import "../App.css";
 
 const Projects = () => {
@@ -112,11 +114,7 @@ const Projects = () => {
 
               <a href="" style={{ display: "flex" }}>
                 <span className="dark:text-black  font">Live</span>
-                <img
-                  className="w-6 h-6 ml-1"
-                  src="https://img.icons8.com/?size=100&id=HAdDrhGGO64N&format=png&color=000000"
-                  alt=""
-                />
+                <img className="w-6 h-6 ml-1" src={LIVE_LOGO} alt="live" />
               </a>
             </div>
           </div>
@@ -147,9 +145,9 @@ const Projects = () => {
             </span>
             <div className="flex mt-1">
               <img
-                src="https://img.icons8.com/?size=100&id=xoCDHXLpIKDF&format=png&color=000000"
                 className="w-9 h-9 mr-1"
-                alt=""
+                src={BAATKARLO_LOGO}
+                alt="baatkarlo logo"
               />
               <h3 className="text-3xl font-bold dark:text-black">BaatKarlo</h3>
             </div>
@@ -188,11 +186,7 @@ const Projects = () => {
 
               <a href="" style={{ display: "flex" }}>
                 <span className="dark:text-black  font">Live</span>
-                <img
-                  className="w-6 h-6 ml-1"
-                  src="https://img.icons8.com/?size=100&id=HAdDrhGGO64N&format=png&color=000000"
-                  alt=""
-                />
+                <img className="w-6 h-6 ml-1" src={LIVE_LOGO} alt="live" />
               </a>
             </div>
           </div>
@@ -257,11 +251,7 @@ const Projects = () => {
 
               <a href="#" style={{ display: "flex" }}>
                 <span className="dark:text-black  font">Live</span>
-                <img
-                  className="w-6 h-6 ml-1"
-                  src="https://img.icons8.com/?size=100&id=HAdDrhGGO64N&format=png&color=000000"
-                  alt=""
-                />
+                <img className="w-6 h-6 ml-1" alt="live" src={LIVE_LOGO} />
               </a>
             </div>
           </div>

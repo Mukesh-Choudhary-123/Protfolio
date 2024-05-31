@@ -1,6 +1,7 @@
 import React from "react";
 import College_Logo from "../assets/college.png";
 import Profile_Photo from "../assets/myImg.png";
+import Coding_Logo from "../assets/coding.png";
 const AboutMe = () => {
   return (
     <>
@@ -65,10 +66,7 @@ const AboutMe = () => {
                     <div className="px-4 py-5 ">
                       <div className="flex">
                         <div className="dark:text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                          <img
-                            src="https://img.icons8.com/?size=100&id=DzQFf09l3D1p&format=png&color=000000"
-                            alt="college"
-                          />
+                          <img src={Coding_Logo} alt="college" />
                         </div>
                         <h6 className="text-xl dark:text-white ml-4 mt-3 font-semibold">
                           Coding
@@ -100,25 +98,6 @@ const AboutMe = () => {
                       </p>
                     </div>
                   </div>
-                  {/* <div className="relative ">
-                    <div className="px-4 pt-1">
-                      <div className="flex">
-                        <div className="dark:text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                          <img
-                            src="https://img.icons8.com/?size=100&id=9437&format=png&color=000000"
-                            alt="college"
-                          />
-                        </div>
-                        <h6 className="text-xl dark:text-white ml-4 mt-3 font-semibold">
-                          School
-                        </h6>
-                      </div>
-                      <p className="mb-4 dark:text-white">
-                        This extension also comes with 3 sample pages. They are
-                        fully coded so you
-                      </p>
-                    </div>
-                  </div> */}
                 </div>
               </div>
             </div>
