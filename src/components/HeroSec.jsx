@@ -47,14 +47,14 @@ export default function HoreSec() {
       <div className="relative overflow-hidden bg-gray-300 dark:bg-[#1E1E1E] ">
         <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
           <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
-            <span className="dark:text-gray-300 text-gray-900 text-2xl">
+            <span className="dark:text-gray-300 text-gray-900 text-xl lg:text-2xl md:text-2xl sm:text-xl">
               Hello,
             </span>
             <div className="sm:max-w-lg">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 pt-1 pb-4 dark:text-white sm:text-5xl">
+              <h1 className="text-xl md:text-4xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 pt-1 pb-4 dark:text-white ">
                 I'm Mukesh Choudhary
               </h1>
-              <span className="text-5xl font-bold text-gray-900 dark:text-white">
+              <span className="text-2xl md:text-5xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
                 {currentWord} <Cursor cursorStyle="|" />
               </span>
 

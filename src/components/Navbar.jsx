@@ -1,30 +1,20 @@
-import { Fragment, useEffect, useState } from "react";
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-  Transition,
 } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-scroll";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import React, { useEffect, useState } from "react";
+import "../App.css";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import useDarkSide from "./hooks/useDarkSide";
-import { Link } from "react-scroll";
-import React from "react";
-import {
-  ScrollingProvider,
-  useScrollSections,
-  Section,
-} from "react-scroll-section";
 
 const navigation = [
-  { name: "Home", to: "home", current: false },
-  { name: "Skills", to: "skills", current: false },
-  { name: "Projects", to: "project", current: false },
-  { name: "About Me", to: "about", current: false },
+  { name: "Home", link: "/apnamarket", current: false },
+  { name: "Skills", link: "/skills", current: false },
+  { name: "Projects", link: "/project", current: false },
+  { name: "About Me", link: "/about", current: false },
 ];
 
 function classNames(...classes) {
@@ -32,34 +22,26 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
-  const sections = useScrollSections();
-
-  const [showMenu, setShowMenu] = useState(false);
   const [scrollPercentage, setScrollPercentage] = useState(0);
+  const [colorTheme, setTheme] = useDarkSide();
+  const [darkSide, setDarkSide] = useState(colorTheme === "light");
 
   useEffect(() => {
+    const handleScrollPercentage = () => {
+      const howMuchScrolled =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      setScrollPercentage((howMuchScrolled / height) * 100);
+    };
+
     window.addEventListener("scroll", handleScrollPercentage);
 
     return () => {
-      window.removeEventListener("scroll", () => {});
+      window.removeEventListener("scroll", handleScrollPercentage);
     };
   }, []);
-
-  function handleScrollPercentage() {
-    const howMuchScrolled =
-      document.body.scrollTop || document.documentElement.scrollTop;
-
-    const height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-
-    setScrollPercentage((howMuchScrolled / height) * 100);
-  }
-
-  const [colorTheme, setTheme] = useDarkSide();
-  const [darkSide, setDarkSide] = useState(
-    colorTheme === "light" ? true : false
-  );
 
   const toggleDarkMode = (checked) => {
     setTheme(checked ? "dark" : "light");
@@ -89,29 +71,64 @@ export default function Navbar() {
                   </DisclosureButton>
                 </div>
                 <div className="flex flex-1 items-center justify-center sm:items-stretch ">
-                  {/* <div className="flex flex-shrink-0 items-center"></div> */}
                   <div className="hidden sm:ml-6 sm:block">
-                    <div className="flex space-x-4">
-                      {navigation.map((item) => (
-                        <Link
-                          key={item.name}
-                          activeClass="active"
-                          to="skills"
-                          spy={true}
-                          smooth={true}
-                          duration={500}
-                          offset={-100}
-                          className={classNames(
-                            item.current
-                              ? "bg-gray-900 dark:text-white text-gray-900"
-                              : "dark:text-gray-300 text-gray-90 hover:bg-gray-700 hover:text-white dark:hover:bg-gray-300 dark:hover:text-white",
-                            "rounded-md px-3 py-2 text-sm font-medium"
-                          )}
-                          aria-current={item.current ? "page" : undefined}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
+                    <div className="flex space-x-8 hover:cursor-default">
+                      <Link
+                        activeClass="active"
+                        to="hero"
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={1000}
+                        className="hover:bg-gray-900  hover:text-white dark:hover:bg-white dark:hover:text-black px-3 p-1 dark:text-white rounded-lg z-10 hover:cursor-pointer font-bold text-xl"
+                      >
+                        Home
+                      </Link>
+
+                      <Link
+                        activeClass="active"
+                        to="skills"
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={1000}
+                        className="hover:bg-gray-900  hover:text-white dark:hover:bg-white dark:hover:text-black px-3 p-1 dark:text-white rounded-lg z-10 hover:cursor-pointer font-bold text-xl"
+                      >
+                        Skills
+                      </Link>
+                      <Link
+                        activeClass="active"
+                        to="project"
+                        spy={true}
+                        smooth={true}
+                        offset={-60}
+                        duration={1000}
+                        className="hover:bg-gray-900  hover:text-white dark:hover:bg-white dark:hover:text-black px-3 p-1 dark:text-white rounded-lg z-10 hover:cursor-pointer font-bold text-xl"
+                      >
+                        Projects
+                      </Link>
+                      <Link
+                        activeClass="active"
+                        to="about"
+                        spy={true}
+                        smooth={true}
+                        offset={-40}
+                        duration={1000}
+                        className="hover:bg-gray-900  hover:text-white dark:hover:bg-white dark:hover:text-black px-3 p-1 dark:text-white rounded-lg z-10 hover:cursor-pointer font-bold text-xl"
+                      >
+                        About Me
+                      </Link>
+                      <Link
+                        activeClass="active"
+                        to="contact"
+                        spy={true}
+                        smooth={true}
+                        offset={-80}
+                        duration={1000}
+                        className="hover:bg-gray-900  hover:text-white dark:hover:bg-white dark:hover:text-black px-3 p-1  dark:text-white rounded-lg z-10 hover:cursor-pointer font-bold text-xl"
+                      >
+                        Contact
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -120,7 +137,7 @@ export default function Navbar() {
                     type="button"
                     // className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
-                    <span className="absolute -inset-1.5" />
+                    {/* <span className="absolute -inset-1.5" /> */}
                     <DarkModeSwitch
                       // style={{ marginBottom: "2rem" }}
                       checked={darkSide}
@@ -134,7 +151,7 @@ export default function Navbar() {
 
             <DisclosurePanel className="sm:hidden">
               <div className="space-y-1 px-2 pb-3 pt-2">
-                {navigation.map((item) => (
+                {/* {navigation.map((item) => (
                   <DisclosureButton
                     key={item.name}
                     as="a"
@@ -149,7 +166,63 @@ export default function Navbar() {
                   >
                     {item.name}
                   </DisclosureButton>
-                ))}
+                ))} */}
+                <Link
+                  activeClass="active"
+                  to="hero"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={1000}
+                  className="block hover:bg-gray-900  hover:text-white dark:hover:bg-white dark:hover:text-black px-3 p-1 dark:text-white rounded-lg z-10 hover:cursor-pointer font-bold text-xl"
+                >
+                  Home
+                </Link>
+
+                <Link
+                  activeClass="active"
+                  to="skills"
+                  spy={true}
+                  smooth={true}
+                  offset={-95}
+                  duration={1000}
+                  className="block hover:bg-gray-900  hover:text-white dark:hover:bg-white dark:hover:text-black px-3 p-1 dark:text-white rounded-lg z-10 hover:cursor-pointer font-bold text-xl"
+                >
+                  Skills
+                </Link>
+                <Link
+                  activeClass="active"
+                  to="project"
+                  spy={true}
+                  smooth={true}
+                  offset={-300}
+                  duration={1000}
+                  className="hover:bg-gray-900 block hover:text-white dark:hover:bg-white dark:hover:text-black px-3 p-1 dark:text-white rounded-lg z-10 hover:cursor-pointer font-bold text-xl"
+                >
+                  Projects
+                </Link>
+                <Link
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-40}
+                  duration={1000}
+                  className="hover:bg-gray-900 block hover:text-white dark:hover:bg-white dark:hover:text-black px-3 p-1 dark:text-white rounded-lg z-10 hover:cursor-pointer font-bold text-xl"
+                >
+                  About Me
+                </Link>
+                <Link
+                  activeClass="active"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={1000}
+                  className="hover:bg-gray-900 block hover:text-white dark:hover:bg-white dark:hover:text-black px-3 p-1  dark:text-white rounded-lg z-10 hover:cursor-pointer font-bold text-xl"
+                >
+                  Contact
+                </Link>
               </div>
             </DisclosurePanel>
             <div className="h-1 top-4 sticky">

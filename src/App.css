@@ -1,3 +1,17 @@
+/* Active */
+
+.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.dark .active {
+  background-color: #fff;
+  color: #000 !important;
+}
+
+/* Animation */
+
 .animated {
   animation: bounce 1s ease infinite alternate;
 }

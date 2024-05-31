@@ -8,6 +8,7 @@ export default {
         500: "500px",
         560: "560px",
       },
+      textColor: ["active"],
     },
   },
   plugins: [],

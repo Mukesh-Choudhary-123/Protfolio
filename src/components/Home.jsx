@@ -1,25 +1,22 @@
 import React from "react";
-import Navbar from "./Navbar";
-import HoreSec from "./HeroSec";
-import Skills from "./Skills";
-import Projects from "./Projects";
 import AboutMe from "./AboutMe";
-import Footer from "./Footer";
-import { ScrollingProvider, Section } from "react-scroll-section";
 import Contact from "./Contact";
+import Footer from "./Footer";
+import HeroSec from "./HeroSec";
+import Navbar from "./Navbar";
+import Projects from "./Projects";
+import Skills from "./Skills";
 
 const Home = () => {
   return (
-    <div className="bg-white dark:bg-[#1E1E1E]">
-      <Navbar></Navbar>
-
-      <HoreSec></HoreSec>
-
-      <Skills></Skills>
-      <Projects></Projects>
-      <AboutMe></AboutMe>
-      <Contact></Contact>
-      <Footer></Footer>
+    <div className="bg-gray-300 dark:bg-[#1E1E1E]">
+      <Navbar />
+      <HeroSec />
+      <Skills />
+      <Projects />
+      <AboutMe />
+      <Contact />
+      <Footer />
     </div>
   );
 };
