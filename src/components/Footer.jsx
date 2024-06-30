@@ -36,8 +36,8 @@ const Footer = () => {
             <img className="w-8 h-8" src={GITHUB_LOGO} alt="github" />
           </a>
         </div>
-        <VisitorCounter />
-        <p className="text-sm text-gray-600 font-semibold dark:text-gray-300">
+        <p className="text-sm text-center text-gray-600 font-semibold dark:text-gray-300">
+          <VisitorCounter />
           Made with ❤ By Mukesh Choudhary
         </p>
         <button

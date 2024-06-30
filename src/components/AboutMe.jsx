@@ -78,16 +78,14 @@ const AboutMe = () => {
                         <br /> I create web applications using{" "}
                         <span className=" font-bold">
                           {" "}
-                          HTML, CSS, JavaScript,
-                        </span>
-                        and <span className=" font-semibold">
-                          Tailwind CSS
+                          HTML, CSS, JavaScript
                         </span>{" "}
-                        .<br /> I build responsive UIs with{" "}
+                        and <span className=" font-bold">Tailwind CSS</span> .
+                        <br /> I build responsive UIs with{" "}
                         <span className=" font-bold">React.js</span> and craft
                         efficient server-side applications with
-                        <span className=" font-bold"> Node.js</span>
-                        and<span className=" font-bold"> Express</span> .
+                        <span className=" font-bold"> Node.js</span> and
+                        <span className=" font-bold"> Express</span> .
                         <br /> I am experienced in designing and consuming
                         <span className=" font-bold"> RESTful APIs </span>
                         and managing databases with{" "}

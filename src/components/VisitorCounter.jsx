@@ -51,7 +51,9 @@ function VisitorCounter() {
 
   return (
     <div>
-      <h2>Total Visitors: {visitorCount}</h2>
+      <p className="text-sm text-gray-600 font-semibold dark:text-gray-300">
+        Total Visitors: {visitorCount} 🚀
+      </p>
     </div>
   );
 }
