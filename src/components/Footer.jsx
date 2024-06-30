@@ -1,6 +1,7 @@
 import React from "react";
 import GITHUB_LOGO from "../assets/color_github.png";
 import LINKEDIN_LOGO from "../assets/linkedin.png";
+import VisitorCounter from "./VisitorCounter";
 const Footer = () => {
   function handleToScrollTop() {
     const scrollStep = -window.scrollY / (1000 / 15); // 500ms duration for smooth scrolling
@@ -35,7 +36,7 @@ const Footer = () => {
             <img className="w-8 h-8" src={GITHUB_LOGO} alt="github" />
           </a>
         </div>
-
+        <VisitorCounter />
         <p className="text-sm text-gray-600 font-semibold dark:text-gray-300">
           Made with ❤ By Mukesh Choudhary
         </p>
