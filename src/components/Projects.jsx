@@ -100,7 +100,7 @@ const Projects = () => {
               cart 🛍️, Stripe payment integration 💳, and comprehensive admin
               panel 📊. Implemented password reset 🔑 and invoice email
               functionalities 📧 using Node Mailer. Built with React ⚛️, Redux
-              🔄, Node.js 🌐, Express 🚀, and MongoDB 🗄️
+              Toolkit🔄, Node.js 🌐, Express 🚀, and MongoDB 🗄️
             </p>
 
             <div className="flex justify-between pr-2">
@@ -173,7 +173,7 @@ const Projects = () => {
             </div>
             <p className="mb-6 mt-4 dark:text-black">
               I crafted a dynamic real-time chat web application featuring an
-              admin panel 📊 usibg by Chart.js. The admin dashboard visualizes
+              admin panel 📊 using by Chart.js. The admin dashboard visualizes
               7-day message counts and detailed graph📈 for messages 💬, users
               👥, chats 💬, and groups 👥. Developed using React.js ⚛️,Node.js
               🌐, Express.js 🚀, Axios ✨, Redux Toolkit 🔄, Material UI 🎨,
