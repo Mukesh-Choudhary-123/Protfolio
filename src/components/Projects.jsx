@@ -221,7 +221,7 @@ const Projects = () => {
         </div>
 
         {/* Project 3 */}
-        <div className="flex flex-col bg-gray-200 dark:bg-gray-300 overflow-hidden rounded-md shadow-xl lg:flex-row">
+        {/* <div className="flex flex-col bg-gray-200 dark:bg-gray-300 overflow-hidden rounded-md shadow-xl lg:flex-row">
           <div className="slideshow">
             <div
               className="slideshowSlider"
@@ -283,7 +283,7 @@ const Projects = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
