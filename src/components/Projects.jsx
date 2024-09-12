@@ -8,25 +8,36 @@ import BAATKARLO_LOGO from "../assets/BaatKarlo_logo.png";
 import BAATKARLO_img1 from "../assets/baatkarlo/login.png";
 import BAATKARLO_img2 from "../assets/baatkarlo/Chat.png";
 import BAATKARLO_img3 from "../assets/baatkarlo/file.png";
-import BAATKARLO_img4 from "../assets/baatkarlo/AdminLogin.png";
+import BAATKARLO_img4 from "../assets/baatkarlohome.png";
 import BAATKARLO_img5 from "../assets/baatkarlo/DashBoard.png";
 import BAATKARLO_img6 from "../assets/baatkarlo/AllChats.png";
 import BAATKARLO_img7 from "../assets/baatkarlo/AllUsers.png";
+import APNA_MARKET_img1 from "../assets/ApnaIndex.png";
+import APNA_MARKET_img2 from "../assets/ApnaHome1.png";
+import APNA_MARKET_img3 from "../assets/ApnaHome2.png";
+import APNA_MARKET_img4 from "../assets/ApnaHome3.png";
 import "../App.css";
 
 const Projects = () => {
   const images = [ImageOne, ImageTwo, ImageThree];
   const baatkarloImages = [
-    BAATKARLO_img1,
-    BAATKARLO_img2,
-    BAATKARLO_img3,
+    // BAATKARLO_img1,
+    // BAATKARLO_img2,
+    // BAATKARLO_img3,
     BAATKARLO_img4,
     BAATKARLO_img5,
     BAATKARLO_img6,
     BAATKARLO_img7,
   ];
 
-  const delay = 2500;
+  const apnaMarket = [
+    APNA_MARKET_img1,
+    APNA_MARKET_img2,
+    APNA_MARKET_img3,
+    APNA_MARKET_img4,
+  ];
+
+  const delay = 6000;
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);
 
@@ -74,7 +85,7 @@ const Projects = () => {
                 transform: `translate3d(${-index * 100}%, 0, 0)`,
               }}
             >
-              {images.map((url, index) => (
+              {apnaMarket.map((url, index) => (
                 <div
                   className="slide inline-block h-auto max-h-80 dark:bg-gray-500  object-scale-down"
                   key={index}
@@ -144,17 +155,17 @@ const Projects = () => {
         <div className="flex flex-col bg-gray-200 dark:bg-gray-300 overflow-hidden rounded-md shadow-xl lg:flex-row-reverse">
           <div className="slideshow">
             <div
-              className="slideshowSlider"
+              className="slideshowSlider "
               style={{
                 transform: `translate3d(${-index * 100}%, 0, 0)`,
               }}
             >
-              {images.map((url, index) => (
+              {baatkarloImages.map((url, index) => (
                 <div
-                  className="slide inline-block h-auto max-h-80 dark:bg-gray-500  object-scale-down"
+                  className="slide inline-block h-auto max-h-80 dark:bg-gray-500  object-cover"
                   key={index}
                 >
-                  <img src={url} alt="img" />
+                  <img src={url} alt="img" className="pt-1" />
                 </div>
               ))}
             </div>
